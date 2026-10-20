@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa upj - Edrian Alfauzan Kusdarmanto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+
+    <!-- HEADER -->
+    <header>
+    <!-- Bagian Baru -->
+<div class="logo-area">
+    <!-- Ganti 'profile.jpg' dengan path/nama file foto Anda -->
+    <img src="Edrian.jpeg" alt="Foto Edrian Alfauzan" class="profile-pic">
+</div>
+<!-- Akhir Bagian Baru -->
+        <h1>Profil Mahasiswa</h1>
+    </header>
+
+    <!-- NAV -->
+    <nav>
+        <ul>
+        <li><a href="#biodata" data-target="biodata" class="active">Biodata</a></li>
+        <li><a href="#pendidikan" data-target="pendidikan">Pendidikan</a></li>
+        <li><a href="#pengalaman" data-target="pengalaman">Pengalaman</a></li>
+        <li><a href="#keahlian" data-target="keahlian">Keahlian</a></li>
+        <li><a href="#publikasi" data-target="publikasi">Publikasi</a></li>
+        </ul>
+    </nav>
+
+    <!-- SECTION (konten berubah sesuai menu nav) -->
+    <section id="konten">
+
+        <article id="biodata" class="panel active">
+        <h2>Biodata</h2>
+        <table>
+            <tr><th>NIM</th><td>: 2025081052</td></tr>
+            <tr><th>Nama</th><td>: Edrian Alfauzan Kusdarmanto</td></tr>
+            <tr><th>Agama</th><td>: Islam</td></tr>
+            <tr><th>Tanggal Lahir</th><td>: 27 Juli 2007</td></tr>
+            <tr><th>Tempat Lahir</th><td>: Tangerang Selatan</td></tr>
+            <tr><th>Program Studi</th><td>: Sistem Informasi</td></tr>
+        </table>
+        </article>
+
+        <article id="pendidikan" class="panel">
+        <h2>Pendidikan</h2>
+        <ul>
+            <li><strong>2025 - Sekarang</strong><br>S1 Sistem Informasi, Fakultas Teknologi dan Desain, Universitas Pembangunan Jaya</li>
+            <li><strong>(2024 - 2025)</strong><br>Sekolah Murid Merdeka</li>
+            <li><strong>(2022 - 2024)</strong><br>SMA Negeri 1 Tangsel</li>
+            <li><strong>(2019 - 2022)</strong><br>SMP Islam Al Falaah</li>
+            <li><strong>(2013 - 2019)</strong><br>SD Al Azhar Syifa Budi Bintaro</li>
+        </ul>
+        </article>
+
+        <article id="pengalaman" class="panel">
+        <h2>Pengalaman</h2>
+        <ul>
+            <li><strong>Divisi Kewirausahaan, HIMASIF</strong><br>Program kerja Dana Usaha untuk mengelola keuangan HIMASIF.</li>
+            <li><strong>Proyek Perkuliahan</strong><br>Analisis dan perancangan sistem informasi (use case, class diagram, SRS) serta perancangan basis data.</li>
+        </ul>
+        </article>
+
+        <article id="keahlian" class="panel">
+        <h2>Keahlian</h2>
+        <ul>
+            <li>HTML &amp; CSS (Web Responsive)</li>
+            <li>Analisis &amp; Perancangan Sistem (UML)</li>
+            <li>Perancangan Basis Data</li>
+            <li>Git &amp; GitHub</li>
+            <li>Jaringan Komputer (dasar)</li>
+        </ul>
+        </article>
+
+        <article id="publikasi" class="panel">
+        <h2>Publikasi</h2>
+        <ul>
+            <li>Repository GitHub: <a href="https://github.com/username" target="_blank" rel="noopener">github.com/username</a></li>
+        </ul>
+        </article>
+
+    </section>
+
+    <!-- ASIDE -->
+    <aside>
+        <h3>Hobi:</h3>
+        <ul>
+        <li>Badminton</li>
+        <li>Bola</li>
+        <li>Pemrograman</li>
+        <li>Desain Web</li>
+        </ul>
+    </aside>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="sosmed">
+        <p>Instagram: @edrianalfauzann</p>
+        </div>
+        <p class="copy">&copy; 2026. All Rights Reserved</p>
+        <div class="web">
+        <strong>Profil Edrian</strong>
+        <p>Web profil mahasiswa Sistem Informasi</p>
+        </div>
+    </footer>
+
+    </div>
+
+    <script>
+    // Klik menu nav -> tampilkan konten sesuai di area <section>
+    var links = document.querySelectorAll('nav a');
+    var panels = document.querySelectorAll('#konten .panel');
+
+    links.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+        e.preventDefault();
+        var id = link.getAttribute('data-target');
+        links.forEach(function (l) { l.classList.remove('active'); });
+        panels.forEach(function (p) { p.classList.remove('active'); });
+        link.classList.add('active');
+        document.getElementById(id).classList.add('active');
+        });
+    });
+    </script>
+</body>
+</html>
